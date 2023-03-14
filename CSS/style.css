@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
 
 *{
     margin: 0;
@@ -17,7 +19,6 @@ body{
 }
 
 :root{
-    --bg: #ffffff;
     --btn: #000000;
     --main: #8F43EE;
 }
@@ -60,6 +61,11 @@ a{
 .navbtn:hover{
     cursor: pointer;
     background-color: var(--btn);
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
 }
 
 .head{
@@ -129,19 +135,21 @@ label{
    display: flex;
    align-items: center;
    font-size: 2rem;
+   padding: 0.9rem;
    background-color: var(--main);
 }
 
 
 textarea{
    width: 100%;
-   height: 28%;
+   height: 76.5rem;
    background-color: #1f1f1f;
    color: #ffffff;
    padding: 1rem 2rem;
    border: 0;
    outline: 0;
-   font-size: 2rem;
+   font-size: 1.5rem;
+   font-family: 'Fira Code',sans-serif;
 }
 
 iframe{
@@ -311,3 +319,40 @@ footer{
         font-size: 2rem;
     }
 }
+
+.tab{
+    overflow: hidden;
+    border: none;
+    background-color: var(--main);
+}
+
+.tablinks{
+    color: #ffffff;
+}
+
+.tab button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover{
+  background-color: #9d4dff;
+}
+
+.tab button.active{
+  background-color: #4b05a0;
+}
+
+.tabcontent{
+  display: none;
+  padding: 0 auto;
+  border: 1px solid var(--main);
+  border-top: none;
+}
+

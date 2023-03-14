@@ -26,14 +26,23 @@
 
     <div class="container">
         <div class="left">
-            <label><i class="fa-brands fa-html5"></i>HTML</label>
+          <div class="tab">
+            <button class="tablinks" onclick="codeLanguages(event, 'htmlbtn')"><i class="fa-brands fa-html5"></i>&nbsp;HTML</button>
+            <button class="tablinks" onclick="codeLanguages(event, 'cssbtn')"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</button>
+            <button class="tablinks" onclick="codeLanguages(event, 'jsbtn')"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</button>
+          </div>
+          
+          <div id="htmlbtn" class="tabcontent">
             <textarea id="htmlcode" onkeyup="run()"></textarea>
-
-            <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
-            <textarea id="csscode" onkeyup="run()"></textarea>
+          </div>
             
-            <label><i class="fa-brands fa-square-js"></i>JavaScript</label>
+          <div id="cssbtn" class="tabcontent">
+            <textarea id="csscode" onkeyup="run()"></textarea>
+          </div>
+          
+          <div id="jsbtn" class="tabcontent">
             <textarea id="jscode" onkeyup="run()"></textarea>
+          </div>
         </div>
         
         <div class="right">
