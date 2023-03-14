@@ -46,6 +46,7 @@ a{
     background-color: none;
 }
 
+
 .navbtn{
     border: none;
     border-radius: 1rem;
@@ -336,9 +337,9 @@ footer{
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 1.4rem 1.6rem;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 .tab button:hover{
@@ -352,7 +353,45 @@ footer{
 .tabcontent{
   display: none;
   padding: 0 auto;
-  border: 1px solid var(--main);
+  border: 0.1rem solid var(--main);
   border-top: none;
 }
 
+#codeEditor, #lineCounter, #codeEditor2, #lineCounter2, #codeEditor3, #lineCounter3{
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: 0;
+    resize: none;
+    font-size: 1.6rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#lineCounter:focus-visible,#codeEditor:focus-visible, 
+#lineCounter2:focus-visible,#codeEditor2:focus-visible, 
+#lineCounter3:focus-visible,#codeEditor3:focus-visible {
+    outline:none;
+}
+
+#lineCounter, #lineCounter2, #lineCounter3{
+    display: flex;
+    border-color: transparent;
+    overflow-y: hidden;
+    text-align: right;
+    box-shadow: none;
+    color: #707070;
+    background-color: #d8d8d8;
+    position: absolute;
+    width: 4rem;
+    background-color:#3E3D32;
+    border-color:#3E3D32;
+    color:#928869;
+}
+
+#codeEditor, #codeEditor2, #codeEditor3 {
+    padding-left: calc(3.5rem + 5px);
+    width:100%;
+    background-color:#272822;
+    border-color:#272822;
+    color:#ffffff;
+}
