@@ -19,8 +19,18 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="index.html" class="logo">SandCode</a>       
-          <a href="index.html"><input class="navbtn" type="button" value="Return to Home"/></a>
+        <a href="index.html" class="logo">SandCode</a>   
+        <div class="buttons">
+          <div class="dropdown">
+            <button title="Download Files" class="dropbtn"><i class="fa-solid fa-download"></i></button>
+            <div class="dropdown-content">
+                  <a onclick="downloadhtml()"><i class="fa-brands fa-html5"></i>&nbsp;HTML</a>
+                  <a onclick="downloadcss()"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</a>
+                  <a onclick="downloadjs()"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</a>    
+            </div>
+          </div>
+            <a href="index.html"><input class="navbtn" type="button" value="Return to Home"/></a>
+        </div>
       </nav>
     </header>
 
