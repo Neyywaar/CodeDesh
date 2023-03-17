@@ -1,11 +1,11 @@
 function run(){
-    var htmlCode = document.getElementById("codeEditor").value;
-    var cssCode = document.getElementById("codeEditor2").value;
-    var jsCode = document.getElementById("codeEditor3").value;
-    var output  = document.getElementById( "output");
+  var htmlCode = document.getElementById("codeEditor").value;
+  var cssCode = document.getElementById("codeEditor2").value;
+  var jsCode = document.getElementById("codeEditor3").value;
+  var output  = document.getElementById( "output");
 
-    output.contentDocument.body.innerHTML = htmlCode+"<style>"+cssCode+"</style>";
-    output.contentWindow.eval(jsCode);
+  output.contentDocument.body.innerHTML = htmlCode+"<style>"+cssCode+"</style>";
+  output.contentWindow.eval(jsCode);
 }
 
 // Get all textareas on the page
@@ -119,3 +119,44 @@ codeEditor3.addEventListener('input', () => {
     line_counter3();
 });
 
+function downloadhtml(){
+  var text = document.getElementById("codeEditor").value;
+  text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+  var blob = new Blob([text], { type: "text/plain"});
+  var anchor = document.createElement("a");
+  anchor.download = "index.html";
+  anchor.href = window.URL.createObjectURL(blob);
+  anchor.target ="_blank";
+  anchor.style.display = "none"; // just to be safe!
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
+
+function downloadcss(){
+  var text = document.getElementById("codeEditor2").value;
+  text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+  var blob = new Blob([text], { type: "text/plain"});
+  var anchor = document.createElement("a");
+  anchor.download = "style.css";
+  anchor.href = window.URL.createObjectURL(blob);
+  anchor.target ="_blank";
+  anchor.style.display = "none"; // just to be safe!
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
+
+function downloadjs(){
+  var text = document.getElementById("codeEditor3").value;
+  text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+  var blob = new Blob([text], { type: "text/plain"});
+  var anchor = document.createElement("a");
+  anchor.download = "script.js";
+  anchor.href = window.URL.createObjectURL(blob);
+  anchor.target ="_blank";
+  anchor.style.display = "none"; // just to be safe!
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
