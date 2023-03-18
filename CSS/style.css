@@ -115,8 +115,65 @@ a{
     justify-content: center;
 }
 
+p{
+    text-align: center;
+    align-items: flex-end;
+    margin-top: 20rem;
+    font-weight: 300;
+}
 
 /* Editor Page */
+.dropbtn {
+    background-color: var(--main);
+    color: white;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.dropbtn:hover{
+    cursor: pointer;
+    background-color: var(--hover) !important;
+}
+  
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 16rem;
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 1.5rem;
+}
+  
+.dropdown-content a{
+    color: black;
+    padding: 1.2rem 1.6rem;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover{
+    background-color: var(--hover);
+    color: #ffffff;
+    cursor: pointer;
+
+}
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+  
+.dropdown:hover .dropbtn{
+    background-color: var(--hover);
+}
+
 .container{
    width: 100%;
    height: 100vh;
@@ -127,6 +184,82 @@ a{
 .left, .right{
    flex-basis: 50%;
    padding: 1rem;
+}
+
+
+.tab{
+    overflow: hidden;
+    border: none;
+    background-color: var(--main);
+}
+
+.tablinks{
+    color: #ffffff;
+}
+
+.tab button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.4rem 1.6rem;
+    transition: 0.3s;
+    font-size: 1.7rem;
+}
+
+.tab button:hover{
+  background-color: var(--hover);
+}
+
+.tab button.active{
+  background-color: #4b05a0;
+}
+
+.tabcontent{
+  display: none;
+  padding: 0 auto;
+  border: 0.1rem solid var(--main);
+  border-top: none;
+}
+
+#codeEditor, #lineCounter, #codeEditor2, #lineCounter2, #codeEditor3, #lineCounter3{
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: 0;
+    resize: none;
+    font-size: 1.6rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#lineCounter:focus-visible,#codeEditor:focus-visible, 
+#lineCounter2:focus-visible,#codeEditor2:focus-visible, 
+#lineCounter3:focus-visible,#codeEditor3:focus-visible {
+    outline:none;
+}
+
+#lineCounter, #lineCounter2, #lineCounter3{
+    display: flex;
+    border-color: transparent;
+    overflow-y: hidden;
+    text-align: right;
+    box-shadow: none;
+    color: #707070;
+    background-color: #d8d8d8;
+    position: absolute;
+    width: 4rem;
+    background-color:#3E3D32;
+    border-color:#3E3D32;
+    color:#928869;
+}
+
+#codeEditor, #codeEditor2, #codeEditor3 {
+    padding-left: calc(3.5rem + 5px);
+    width:100%;
+    background-color:#272822;
+    border-color:#272822;
+    color:#ffffff;
 }
 
 label i{
@@ -322,128 +455,6 @@ footer{
     }
 }
 
-.tab{
-    overflow: hidden;
-    border: none;
-    background-color: var(--main);
-}
 
-.tablinks{
-    color: #ffffff;
-}
 
-.tab button{
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 1.4rem 1.6rem;
-    transition: 0.3s;
-    font-size: 1.7rem;
-}
 
-.tab button:hover{
-  background-color: var(--hover);
-}
-
-.tab button.active{
-  background-color: #4b05a0;
-}
-
-.tabcontent{
-  display: none;
-  padding: 0 auto;
-  border: 0.1rem solid var(--main);
-  border-top: none;
-}
-
-#codeEditor, #lineCounter, #codeEditor2, #lineCounter2, #codeEditor3, #lineCounter3{
-    margin: 0;
-    padding: 1rem 0;
-    border-radius: 0;
-    resize: none;
-    font-size: 1.6rem;
-    outline: none;
-    box-sizing: border-box;
-}
-
-#lineCounter:focus-visible,#codeEditor:focus-visible, 
-#lineCounter2:focus-visible,#codeEditor2:focus-visible, 
-#lineCounter3:focus-visible,#codeEditor3:focus-visible {
-    outline:none;
-}
-
-#lineCounter, #lineCounter2, #lineCounter3{
-    display: flex;
-    border-color: transparent;
-    overflow-y: hidden;
-    text-align: right;
-    box-shadow: none;
-    color: #707070;
-    background-color: #d8d8d8;
-    position: absolute;
-    width: 4rem;
-    background-color:#3E3D32;
-    border-color:#3E3D32;
-    color:#928869;
-}
-
-#codeEditor, #codeEditor2, #codeEditor3 {
-    padding-left: calc(3.5rem + 5px);
-    width:100%;
-    background-color:#272822;
-    border-color:#272822;
-    color:#ffffff;
-}
-
-.dropbtn {
-    background-color: var(--main);
-    color: white;
-    padding: 1.6rem;
-    font-size: 1.6rem;
-    border: none;
-    border-radius: 1rem;
-}
-
-.dropbtn:hover{
-    cursor: pointer;
-    background-color: var(--hover) !important;
-}
-  
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-  
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 16rem;
-    box-shadow: 0 0.8rem 1.6rem 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    font-size: 1.5rem;
-}
-  
-.dropdown-content a{
-    color: black;
-    padding: 1.2rem 1.6rem;
-    text-decoration: none;
-    display: block;
-}
-  
-.dropdown-content a:hover{
-    background-color: var(--hover);
-    color: #ffffff;
-    cursor: pointer;
-
-}
-  
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-  
-.dropdown:hover .dropbtn{
-    background-color: var(--hover);
-}
