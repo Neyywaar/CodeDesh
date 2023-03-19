@@ -326,10 +326,18 @@ footer{
     color: var(--main);
 }
 
-@media screen and (max-width: 780){
+@media only screen and (max-width: 780px) {
     .logo{
         font-size: 3rem;
         font-weight: 600;
+    }
+
+    .dropbtn{
+        border-radius: 0.5rem;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.2rem;
     }
 
     .navbtn{
@@ -375,13 +383,20 @@ footer{
     gap: 25rem;
     }
 
+    .container{
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        display: flex;
+    }
+
     textarea{
         width: 100%;
         height: 9%;
     }
 }
 
-@media screen and (max-width: 460){
+@media only screen and (max-width: 460px) {
     .logo{
         font-size: 2.5rem;
     }
@@ -449,12 +464,8 @@ footer{
     }
 }
 
-@media screen and (max-width: 360){
+@media only screen and (max-width: 360px) {
     .head{
         font-size: 2rem;
     }
 }
-
-
-
-
