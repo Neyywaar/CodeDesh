@@ -115,7 +115,7 @@ a{
     justify-content: center;
 }
 
-p{
+.copy{
     text-align: center;
     align-items: flex-end;
     margin-top: 20rem;
