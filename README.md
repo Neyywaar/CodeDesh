@@ -1,7 +1,7 @@
 
-# SandCode
+# CodeDesh
 
-This is the repository for the SandCode, which is an online code editor designed to help users use HTML, CSS & JavaScript. The project is built using HTML, CSS & JavaScript and is hosted on Netlify.
+This is the repository for the CodeDesh, which is an online code editor designed to help users use HTML, CSS & JavaScript. The project is built using HTML, CSS & JavaScript and is hosted on Netlify.
 
 
 ## Features
