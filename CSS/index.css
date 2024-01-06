@@ -1,0 +1,64 @@
+body{
+    overflow: hidden;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.imp{
+    color: var(--main);
+}
+
+.headsub{
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 6rem 30rem;
+}
+
+.headbtn{
+    border: none;
+    border-radius: 1rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0rem auto 1rem auto;
+    width: 20rem;
+    background-color: var(--btn);
+    color: #ffffff;
+    font-family: 'Poppins',sans-serif;
+}
+
+.headbtn:hover{
+    cursor: pointer;
+    background-color: var(--main);
+}
+
+.headtext{
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.copy{
+    text-align: center;
+    align-items: flex-end;
+    margin: 5rem 0 2rem 0;
+    font-weight: 300;
+}
+
+p{
+    font-size: 2rem;
+}
